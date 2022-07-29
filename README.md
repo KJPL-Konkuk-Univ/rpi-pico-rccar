@@ -4,4 +4,6 @@ RPI-Pico Robot for education volunteering
 
 Target: Raspberry Pi Pico
 
+library for neopixel: https://github.com/blaz-r/pi_pico_neopixel
+
 
