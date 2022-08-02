@@ -71,7 +71,8 @@ while True:
         MotorL_F.low()
         MotorL_B.low()
         pixels.fill(green)
-
+        
+    pixels.show()
 
 
 
