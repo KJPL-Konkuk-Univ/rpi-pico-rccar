@@ -1,6 +1,6 @@
 '''
 RPI-Pico Robot for education volunteering
-Build date: 22.07.31
+Build date: 22.08.02
 language: Python(micropython)
 Target: Raspberry Pi Pico(Arm v6-M)
 '''
