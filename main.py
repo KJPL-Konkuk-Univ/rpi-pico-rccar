@@ -31,48 +31,59 @@ orange = (255, 50, 0)
 green = (0, 255, 0)
 blue = (0, 0, 255)
 red = (255, 0, 0)
+led.high()
+pixels.fill(green)
 
 #run
 while True:
-    if UART1_BT.any():
-        RcvBT = UART1_BT.readline()
-     
-    if RcvBT == "1":
+    RcvBT = UART1_BT.read()
+    dat = str(RcvBT)
+    print(dat)
+    pixels.show()
+    
+    if dat == "b'1'":
+        print('m1')
+        
         MotorR_F.high()
         MotorR_B.low()
         MotorL_F.high()
         MotorL_B.low()
         pixels.fill(white)
         
-    elif RcvBT == "2":
+    elif dat == "b'2'":
+        print('m2')
         MotorR_F.low()
         MotorR_B.high()
         MotorL_F.low()
         MotorL_B.high()
         pixels.fill(red)
     
-    elif RcvBT == "3":
+    elif dat == "b'3'":
+        print('m3')
         MotorR_F.high()
         MotorR_B.low()
         MotorL_F.low()
         MotorL_B.high()
         pixels.fill(blue)
         
-    elif RcvBT == "4":
+    elif dat == "b'4'":
+        print('m4')
         MotorR_F.low()
         MotorR_B.high()
         MotorL_F.high()
         MotorL_B.low()
         pixels.fill(orange)
         
-    elif RcvBT == "0":
+    elif dat == "b'0'":
+        print('0')
         MotorR_F.low()
         MotorR_B.low()
         MotorL_F.low()
         MotorL_B.low()
         pixels.fill(green)
         
-    pixels.show()
+    else:
+        pixels.show()
 
 
 
