@@ -11,10 +11,10 @@ from neopixel import Neopixel
 
 #setup-variables
 numpix = 8
-NPXL_BASE = 28
+NPXL_BASE = 28 #GP28
 
 #setup-defines
-UART1_BT = UART(0, 9600) #UART1_TX: 11, UART!_RX: 12
+UART1_BT = UART(0, 9600) #UART1_TX: GP0, UART!_RX: GP1
 
 led = Pin(25, Pin.OUT) #internal LED, for debug
 MotorR_F = Pin(4, Pin.OUT)
